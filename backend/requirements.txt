@@ -16,7 +16,7 @@ langchain-community==0.3.9      # FAISS vector store wrapper
 langchain-core>=0.3.27,<0.4.0
 
 # ── Vector store ───────────────────────────────────────────────────────────────
-faiss-cpu==1.9.0                # FAISS — no GPU required, works on all platforms
+faiss-cpu==1.14.2            # FAISS — no GPU required, works on all platforms
 
 # ── PDF parsing ────────────────────────────────────────────────────────────────
 pymupdf==1.25.1                 # PyMuPDF (import fitz) — fast, page-aware
