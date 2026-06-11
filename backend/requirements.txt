@@ -1,0 +1,30 @@
+# FinRAG Python Backend — requirements.txt
+# Install: pip install -r requirements.txt
+
+# ── Web framework ──────────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12       # required for FastAPI file uploads
+
+# ── Mistral AI ─────────────────────────────────────────────────────────────────
+mistralai==1.2.5                # direct SDK for LLM chat.complete()
+langchain-mistralai==0.2.4      # MistralAIEmbeddings wrapper
+
+# ── LangChain ecosystem ────────────────────────────────────────────────────────
+langchain==0.3.9
+langchain-community==0.3.9      # FAISS vector store wrapper
+langchain-core>=0.3.27,<0.4.0
+
+# ── Vector store ───────────────────────────────────────────────────────────────
+faiss-cpu==1.9.0                # FAISS — no GPU required, works on all platforms
+
+# ── PDF parsing ────────────────────────────────────────────────────────────────
+pymupdf==1.25.1                 # PyMuPDF (import fitz) — fast, page-aware
+
+# ── Configuration ──────────────────────────────────────────────────────────────
+pydantic==2.10.3
+pydantic-settings==2.6.1
+python-dotenv==1.0.1
+
+# ── Utilities ──────────────────────────────────────────────────────────────────
+numpy<2.0.0                     # FAISS requires numpy <2

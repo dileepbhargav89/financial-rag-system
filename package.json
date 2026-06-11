@@ -1,0 +1,9 @@
+{
+  "name": "finrag-python",
+  "version": "2.0.0",
+  "description": "FinRAG — run both frontend and backend",
+  "scripts": {
+    "frontend": "cd frontend && npm start",
+    "install:frontend": "cd frontend && npm install"
+  }
+}
