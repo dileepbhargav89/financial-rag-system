@@ -148,5 +148,5 @@ export function useChat() {
     setError(null);
   }, []);
 
-  return { messages, isLoading, error, sendMessage, fetchInsight, clearChat };
+  return { messages, isLoading, error, sendMessage, fetchInsight, clearChat,addMessage };
 }
