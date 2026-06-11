@@ -78,7 +78,13 @@ async def global_exception_handler(request: Request, exc: Exception):
         content={"error": "Internal server error", "detail": str(exc)},
     )
 
-
+@app.get("/")
+async def health_check():
+    return {
+        "status": "healthy",
+        "service": "FinRAG API",
+        "version": "2.0.0"
+    }
 # ── Routers ───────────────────────────────────────────────────────────────────
 app.include_router(upload.router, prefix="/upload", tags=["Upload"])
 app.include_router(query.router,  tags=["Query"])
