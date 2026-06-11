@@ -7,12 +7,11 @@ uvicorn[standard]==0.32.1
 python-multipart==0.0.12       # required for FastAPI file uploads
 
 # ── Mistral AI ─────────────────────────────────────────────────────────────────
-mistralai==1.2.5                # direct SDK for LLM chat.complete()
-langchain-mistralai==0.2.4      # MistralAIEmbeddings wrapper
-
+mistralai>=1.8.0
+langchain-mistralai>=0.2.6
 # ── LangChain ecosystem ────────────────────────────────────────────────────────
-langchain==0.3.9
-langchain-community==0.3.9      # FAISS vector store wrapper
+langchain>=0.3.20
+langchain-community>=0.3.20     # FAISS vector store wrapper
 langchain-core>=0.3.27,<0.4.0
 
 # ── Vector store ───────────────────────────────────────────────────────────────
@@ -28,3 +27,4 @@ python-dotenv==1.0.1
 
 # ── Utilities ──────────────────────────────────────────────────────────────────
 numpy<2.0.0                     # FAISS requires numpy <2
+httpx==0.28.1
